@@ -76,7 +76,7 @@
 	opacity: 0.3;
 	position: absolute;
 	bottom: 0;
-	left: 10;
+	left: 10px;
   }
   
   .input {
@@ -139,14 +139,44 @@
 	.output {
 	  font-size: 1.5rem;
 	}
+  
+	.input {
+	  gap: 5px;
+	}
   }
   
   @media (max-width: 400px) {
 	.button {
 	  font-size: 1.2rem;
+	  height: 60px;
 	}
   
 	.output {
 	  font-size: 1.2rem;
+	  height: 60px;
+	  padding: 5px;
 	}
-}
+  
+	.calculator .casio {
+	  font-size: 1rem;
+	  height: 40px;
+	  padding: 5px 5px 5px 15px;
+	}
+  
+	.display-1 {
+	  font-size: 0.9rem;
+	}
+  
+	.display-2 {
+	  font-size: 1.2rem;
+	}
+  
+	.display-3 {
+	  font-size: 1rem;
+	}
+  
+	.input {
+	  gap: 5px;
+	}
+  }
+  
