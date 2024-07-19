@@ -1,24 +1,27 @@
-/*Variables*/
-:root{
+/* Variables */
+:root {
 	--dark-gray: rgb(43,39,39);
 	--light-gray: rgb(86, 86, 84);
 	--light-blue: #40b9fab8;
 	--orange: orange;
-}
-*{
+  }
+  
+  * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-}
-body{
+  }
+  
+  body {
 	min-height: 100vh;
 	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	font-family: sans-serif;
-}
-.calculator{
+  }
+  
+  .calculator {
 	background-color: var(--dark-gray);
 	width: 88%;
 	max-width: 450px;
@@ -26,21 +29,26 @@ body{
 	border-radius: 10px;
 	box-shadow: 1px 3px 13px -1px rgba(0,0,0, 0.56);
 	overflow: hidden;
-}
-.calculator .casio{
+	display: flex;
+	flex-direction: column;
+  }
+  
+  .calculator .casio {
 	background-color: darkblue;
 	height: 50px;
 	padding: 10px 10px 10px 30px;
 	border-radius: 5px;
 	font-size: 1.5rem;
 	cursor: not-allowed;
-}
-.calculator .casio p{
+  }
+  
+  .calculator .casio p {
 	text-align: left;
 	color: white;
 	font-weight: 600;
-}
-.output{
+  }
+  
+  .output {
 	background-color: white;
 	height: 80px;
 	width: 100%;
@@ -50,32 +58,40 @@ body{
 	font-size: 2rem;
 	position: relative;
 	cursor: not-allowed;
-}
-.display-1{
+  }
+  
+  .display-1 {
 	height: 20px;
 	font-size: 1.1rem;
 	opacity: 0.3;
 	overflow: hidden;
-}
-.display-2{
+  }
+  
+  .display-2 {
 	color: var(--orange);
-}
-.display-3{
+  }
+  
+  .display-3 {
 	font-size: 1.3rem;
 	opacity: 0.3;
 	position: absolute;
 	bottom: 0;
 	left: 10;
-}
-.input{
+  }
+  
+  .input {
 	color: white;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	grid-template-rows: repeat(4, 1fr);
-}
-.button{
+	grid-template-rows: repeat(5, 1fr);
+	gap: 10px;
+	padding: 10px;
+	flex: 1;
+  }
+  
+  .button {
 	background-color: var(--dark-gray);
-	height: 100px;
+	height: 100%;
 	width: 100%;
 	font-size: 2rem;
 	display: flex;
@@ -84,27 +100,53 @@ body{
 	border: 2px solid rgb(57, 54, 45);
 	border-radius: 15px;
 	cursor: pointer;
-}
-.button:hover{
+  }
+  
+  .button:hover {
 	background-color: lightskyblue;
 	transition: all 0.1s ease-in-out;
-}
-.zero{
-	grid-column-start: 1;
-	grid-column-end: 3;
-}
-.c, .ce{
+  }
+  
+  .zero {
+	grid-column: span 2;
+  }
+  
+  .c, .ce {
 	background-color: var(--light-blue);
-}
-.c:hover, .ce:hover{
+  }
+  
+  .c:hover, .ce:hover {
 	background-color: #369dd5;
-}
-.symbol{
+  }
+  
+  .symbol {
 	background-color: var(--light-gray);
-}
-.equal{
+  }
+  
+  .equal {
 	background-color: var(--orange);
-}
-.equal:hover{
+  }
+  
+  .equal:hover {
 	background-color: #de940b;
+  }
+  
+  @media (max-width: 600px) {
+	.button {
+	  font-size: 1.5rem;
+	}
+  
+	.output {
+	  font-size: 1.5rem;
+	}
+  }
+  
+  @media (max-width: 400px) {
+	.button {
+	  font-size: 1.2rem;
+	}
+  
+	.output {
+	  font-size: 1.2rem;
+	}
 }
