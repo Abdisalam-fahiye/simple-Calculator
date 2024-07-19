@@ -1,54 +1,55 @@
 /* Variables */
 :root {
-	--dark-gray: rgb(43,39,39);
+	--dark-gray: rgb(43, 39, 39);
 	--light-gray: rgb(86, 86, 84);
 	--light-blue: #40b9fab8;
 	--orange: orange;
-  }
-  
-  * {
+}
+
+* {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-  }
-  
-  body {
+}
+
+body {
 	min-height: 100vh;
 	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	font-family: sans-serif;
-  }
-  
-  .calculator {
+}
+
+.calculator {
 	background-color: var(--dark-gray);
-	width: 88%;
+	width: 100%;
 	max-width: 450px;
 	border: 2px solid white;
 	border-radius: 10px;
-	box-shadow: 1px 3px 13px -1px rgba(0,0,0, 0.56);
+	box-shadow: 1px 3px 13px -1px rgba(0, 0, 0, 0.56);
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
-  }
-  
-  .calculator .casio {
+	margin: 10px;
+}
+
+.calculator .casio {
 	background-color: darkblue;
 	height: 50px;
 	padding: 10px 10px 10px 30px;
 	border-radius: 5px;
 	font-size: 1.5rem;
 	cursor: not-allowed;
-  }
-  
-  .calculator .casio p {
+}
+
+.calculator .casio p {
 	text-align: left;
 	color: white;
 	font-weight: 600;
-  }
-  
-  .output {
+}
+
+.output {
 	background-color: white;
 	height: 80px;
 	width: 100%;
@@ -58,28 +59,28 @@
 	font-size: 2rem;
 	position: relative;
 	cursor: not-allowed;
-  }
-  
-  .display-1 {
+}
+
+.display-1 {
 	height: 20px;
 	font-size: 1.1rem;
 	opacity: 0.3;
 	overflow: hidden;
-  }
-  
-  .display-2 {
+}
+
+.display-2 {
 	color: var(--orange);
-  }
-  
-  .display-3 {
+}
+
+.display-3 {
 	font-size: 1.3rem;
 	opacity: 0.3;
 	position: absolute;
 	bottom: 0;
 	left: 10px;
-  }
-  
-  .input {
+}
+
+.input {
 	color: white;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
@@ -87,96 +88,115 @@
 	gap: 10px;
 	padding: 10px;
 	flex: 1;
-  }
-  
-  .button {
+}
+
+.button {
 	background-color: var(--dark-gray);
-	height: 100%;
-	width: 100%;
-	font-size: 2rem;
+	height: 60px;
+	font-size: 1.5rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	border: 2px solid rgb(57, 54, 45);
 	border-radius: 15px;
 	cursor: pointer;
-  }
-  
-  .button:hover {
+}
+
+.button:hover {
 	background-color: lightskyblue;
 	transition: all 0.1s ease-in-out;
-  }
-  
-  .zero {
+}
+
+.zero {
 	grid-column: span 2;
-  }
-  
-  .c, .ce {
+}
+
+.c,
+.ce {
 	background-color: var(--light-blue);
-  }
-  
-  .c:hover, .ce:hover {
+}
+
+.c:hover,
+.ce:hover {
 	background-color: #369dd5;
-  }
-  
-  .symbol {
+}
+
+.symbol {
 	background-color: var(--light-gray);
-  }
-  
-  .equal {
+}
+
+.equal {
 	background-color: var(--orange);
-  }
-  
-  .equal:hover {
+}
+
+.equal:hover {
 	background-color: #de940b;
-  }
-  
-  @media (max-width: 600px) {
+}
+
+@media (max-width: 600px) {
 	.button {
-	  font-size: 1.5rem;
+		font-size: 1.2rem;
+		height: 50px;
 	}
-  
+
 	.output {
-	  font-size: 1.5rem;
+		font-size: 1.5rem;
+		height: 60px;
 	}
-  
-	.input {
-	  gap: 5px;
-	}
-  }
-  
-  @media (max-width: 400px) {
-	.button {
-	  font-size: 1.2rem;
-	  height: 60px;
-	}
-  
-	.output {
-	  font-size: 1.2rem;
-	  height: 60px;
-	  padding: 5px;
-	}
-  
+
 	.calculator .casio {
-	  font-size: 1rem;
-	  height: 40px;
-	  padding: 5px 5px 5px 15px;
+		font-size: 1rem;
+		height: 40px;
+		padding: 5px 5px 5px 15px;
 	}
-  
+
 	.display-1 {
-	  font-size: 0.9rem;
+		font-size: 0.9rem;
 	}
-  
+
 	.display-2 {
-	  font-size: 1.2rem;
+		font-size: 1.2rem;
 	}
-  
+
 	.display-3 {
-	  font-size: 1rem;
+		font-size: 1rem;
 	}
-  
+
 	.input {
-	  gap: 5px;
+		gap: 5px;
 	}
-  }
-  
+}
+
+@media (max-width: 400px) {
+	.button {
+		font-size: 1rem;
+		height: 40px;
+	}
+
+	.output {
+		font-size: 1.2rem;
+		height: 50px;
+	}
+
+	.calculator .casio {
+		font-size: 0.8rem;
+		height: 30px;
+		padding: 5px 5px 5px 10px;
+	}
+
+	.display-1 {
+		font-size: 0.8rem;
+	}
+
+	.display-2 {
+		font-size: 1rem;
+	}
+
+	.display-3 {
+		font-size: 0.9rem;
+	}
+
+	.input {
+		gap: 5px;
+	}
+}
