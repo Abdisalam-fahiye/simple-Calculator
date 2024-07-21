@@ -1,5 +1,5 @@
 // Variables
-alert('Hell welcome! I built Simple Calcuator Using html,css  and JavaScript');
+// alert('Hell welcome! I built Simple Calcuator Using html,css  and JavaScript');
 const allNumbers = document.querySelectorAll('.number');
 const symbols = document.querySelectorAll('.symbol');
 const equalButton = document.querySelector('.equal');
